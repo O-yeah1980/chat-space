@@ -35,7 +35,7 @@
 - belongs_to :user
 
 
-## commentsテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
