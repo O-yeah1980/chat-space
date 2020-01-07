@@ -101,6 +101,61 @@
       height: 100px;
       width: 100%;
       border-bottom: solid 1px #eee;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      &__left-items {
+        // background-color: pink;
+        height: 100%;
+        // widthは仮の値
+        width: 200px;
+        &__current-group {
+          // background-color: yellowgreen;
+          height: 20px;
+          width: 100%;
+          margin-top: 35px;
+          color: #333;
+          font-size: 20px;
+          line-height: 20px;
+        }
+        &__member-list {
+          // background-color: lightskyblue;
+          height: 12px;
+          width: 100%;
+          margin-top: 15px;
+          color: #999;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+      &__right-item {
+        // background-color: yellow;
+        height: 100%;
+        width: 72px;
+        &__btn-border {
+          // background-color: whitesmoke;
+          height: 40px;
+          width: 100%;
+          margin-top: 28px;
+          border: 1px solid #38aef0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &__edit-btn {
+            // background-color: red;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            a {
+              color: #38aef0;
+              font-size: 16px;
+              padding: 12px 22px;
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
     &__messages {
       background-color: #fafafa;
