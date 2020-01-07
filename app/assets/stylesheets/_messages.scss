@@ -249,6 +249,78 @@
       background-color: #d2d2d2;
       height: 90px;
       width: 100%;
+      padding: 20px 40px;
+      &__new-message {
+        // background-color: pink;
+        height: 50px;
+        width: calc(100vw - 300px - 40px - 40px);
+        display: flex;
+        justify-content: space-between;
+        &__box {
+          background-color: #fff;
+          height: 100%;
+          width: calc(100% - 72px - 15px);
+          position: relative;
+          &__text {
+            // background-color: yellowgreen;
+            height: 100%;
+            width: 100%;
+            padding-left: 10px;
+            border-style: none;
+          }
+          &__image {
+            // background-color: #38aef0;
+            height: 100%;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            left: calc(100% - 50px - 10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__icon {
+              font-size: 1.5em;
+            }
+            &__file {
+              display: none;
+            }
+          }
+        }
+        &__right-item {
+          // background-color: yellow;
+          height: 100%;
+          width: 72px;
+          &__btn-border {
+            background-color: #38aef0;
+            height: 50px;
+            width: 100%;
+            // margin-top: 20px;
+            border: 1px solid #38aef0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__submit-btn {
+              // background-color: red;
+              height: 50px;
+              width: 100%;
+              line-height: 50px;
+              text-align: center;
+              a {
+                color:#fff;
+                font-size: 16px;
+                padding: 17px 20px;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        // &__submit-btn {
+        //   background-color: yellowgreen;
+        //   height: 100%;
+        //   width: 72px;
+
+        // }
+      }
     }
   }
 }
