@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 $side-bar_font-color: #fff;
 $chat-main_font-color_title: #333;
 $chat-main_font-color_sub: #999;
@@ -21,7 +22,6 @@ $font-size_20: 20px;
   width: 100vw;
   display: flex;
   .side-bar {
-    // background-color: #253141;
     height: 100%;
     width: 300px;
     &__user-name {
@@ -31,22 +31,19 @@ $font-size_20: 20px;
       display: flex;
       align-items: center;
       &__top-items {
-        // background-color: #aaa;
         height: 20px;
         width: 260px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         &__name {
-          // background-color: red;
           height: 100%;
           width: calc(100% - 60px);
           color: $side-bar_font-color;
-          // font-size: $font-size_16;
+          font-size: $font-size_16;
           line-height: 20px;
         }
         &__icons {
-          // background-color: pink;
           height: 100%;
           width: 60px;
           line-height: 20px;
@@ -56,7 +53,6 @@ $font-size_20: 20px;
             margin-left: 5px;
             a {
               color: $side-bar_font-color;
-              font-size: $font-size_16;
             }
           }
         }
@@ -67,22 +63,16 @@ $font-size_20: 20px;
       height: calc(100vh - 100px);
       width: 100%;
       padding: 20px 20px 0 20px;
-      // color: $side-bar_font-color;
-      // font-weight: bold;
       &__top-items {
-        // background-color: pink;
         height: 31px;
         width: 100%;
         margin-bottom: 40px;
         &__group-name {
-          // background-color: green;
           height: 15px;
           width: 100%;
           margin-bottom: 5px;
           line-height: 15px;
           a {
-            height: 100%;
-            width: 100%;
             color: $side-bar_font-color;
             font-size: $font-size_15;
             font-weight: bold;
@@ -90,13 +80,10 @@ $font-size_20: 20px;
           }
         }
         &__message {
-          // background-color: blue;
           height: 11px;
           width: 100%;
           line-height: 11px;
           a {
-            height: 100%;
-            width: 100%;
             color: $side-bar_font-color;
             font-size: $font-size_11;
             font-weight: bold;
@@ -107,7 +94,6 @@ $font-size_20: 20px;
     }
   }
   .chat-main {
-    // background-color: #fff;
     height: 100%;
     width: calc(100vw - 300px);
     &__group-info {
@@ -119,12 +105,9 @@ $font-size_20: 20px;
       display: flex;
       justify-content: space-between;
       &__left-items {
-        // background-color: pink;
         height: 100%;
-        // widthは仮の値
         width: 200px;
         &__current-group {
-          // background-color: yellowgreen;
           height: 20px;
           width: 100%;
           margin-top: 35px;
@@ -133,7 +116,6 @@ $font-size_20: 20px;
           line-height: 20px;
         }
         &__member-list {
-          // background-color: lightskyblue;
           height: 12px;
           width: 100%;
           margin-top: 15px;
@@ -143,11 +125,9 @@ $font-size_20: 20px;
         }
       }
       &__right-item {
-        // background-color: yellow;
         height: 100%;
         width: 72px;
         &__btn-border {
-          // background-color: whitesmoke;
           height: 40px;
           width: 100%;
           margin-top: 28px;
@@ -156,7 +136,6 @@ $font-size_20: 20px;
           justify-content: center;
           align-items: center;
           &__edit-btn {
-            // background-color: red;
             height: 40px;
             width: 100%;
             line-height: 40px;
@@ -177,38 +156,30 @@ $font-size_20: 20px;
       width: 100%;
       padding: 35px 40px 0 40px;
       &__message {
-        // background-color: darkgoldenrod;
         height: 88px;
         width: 100%;
         &__info {
-          // background-color: darkgray;
           height: 16px;
           width: 100%;
           margin-bottom: 12px;
           display: flex;
           justify-content: left;
           &__talker {
-            // background-color: darksalmon;
             height: 100%;
-            // width仮
             width: 25%;
             color: $chat-main_font-color_title;
             font-size: $font-size_16;
             line-height: 16px;
           }
           &__date {
-            // background-color: red;
             height: 100%;
-            // width仮
             width: 25%;
             color: $chat-main_font-color_sub;
             font-size: $font-size_12;
             line-height: 16px;
-            
           }
         }
         &__text {
-          // background-color: darkred;
           height: 14px;
           width: 100%;
           margin-bottom: 46px;
@@ -265,7 +236,6 @@ $font-size_20: 20px;
       width: 100%;
       padding: 20px 40px;
       &__new-message {
-        // background-color: pink;
         height: 50px;
         width: calc(100vw - 300px - 40px - 40px);
         display: flex;
@@ -276,14 +246,12 @@ $font-size_20: 20px;
           width: calc(100% - 72px - 15px);
           position: relative;
           &__text {
-            // background-color: yellowgreen;
             height: 100%;
             width: 100%;
             padding-left: 10px;
             border-style: none;
           }
           &__image {
-            // background-color: #38aef0;
             height: 100%;
             width: 50px;
             position: absolute;
@@ -301,20 +269,17 @@ $font-size_20: 20px;
           }
         }
         &__right-item {
-          // background-color: yellow;
           height: 100%;
           width: 72px;
           &__btn-border {
             background-color: $chat-main_font-color_edit;
             height: 50px;
             width: 100%;
-            // margin-top: 20px;
             border: 1px solid $chat-main_font-color_edit;
             display: flex;
             justify-content: center;
             align-items: center;
             &__submit-btn {
-              // background-color: red;
               height: 50px;
               width: 100%;
               line-height: 50px;
@@ -328,12 +293,6 @@ $font-size_20: 20px;
             }
           }
         }
-        // &__submit-btn {
-        //   background-color: yellowgreen;
-        //   height: 100%;
-        //   width: 72px;
-
-        // }
       }
     }
   }
