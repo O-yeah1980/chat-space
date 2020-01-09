@@ -4,16 +4,22 @@
       .side-bar__user-name__top-items__name
         ooya
       %ul.side-bar__user-name__top-items__icons
-        %li.side-bar__user-name__top-items__btn-left
-          =link_to "#", class: "top-items__btn top-items__btn--left" do
-            = icon('far', 'edit', class: "top-items__btn--icon")
+        %li
+          =link_to "#" do
+            = icon('far', 'edit')
             %span<>
-        %li.side-bar__user-name__top-items__btn-right
-          =link_to "#", class: "top-items__btn top-items__btn--right" do
-            = icon('fas', 'cog', class: "top-items__btn--icon")
+        %li
+          =link_to "#" do
+            = icon('fas', 'cog')
             %span<>
   .side-bar__group-list
-    .side-bar__group-list__top-items__group-name
-      =link_to "tech::expert", "#"
-    .side-bar__group-list__top-items__message
-      =link_to "まだメッセージがありません", "#"
+    .side-bar__group-list__top-items
+      .side-bar__group-list__top-items__group-name
+        =link_to "tech::expert", "#"
+      .side-bar__group-list__top-items__message
+        =link_to "まだメッセージがありません", "#"
+    .side-bar__group-list__top-items2
+      .side-bar__group-list__top-items__group-name
+        =link_to "tech::expert", "#"
+      .side-bar__group-list__top-items__message
+        =link_to "まだメッセージがありません", "#"
