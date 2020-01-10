@@ -3,11 +3,16 @@
 }
 
 // font-color font-size
-$side-bar_font-color: #fff;
-$chat-main_font-color_title: #333;
-$chat-main_font-color_sub: #999;
-$chat-main_font-color_text: #434a54;
-$chat-main_font-color_edit: #38aef0;
+$color-253141: #253141;
+$color-ffffff: #fff;
+$color-333333: #333;
+$color-999999: #999;
+$color-eeeeee: #eee;
+$color-2f3e51: #2f3e51;
+$color-434a54: #434a54;
+$color-38aef0: #38aef0;
+$color-fafafa: #fafafa;
+$color-d2d2d2: #d2d2d2;
 $font-size_11: 11px;
 $font-size_12: 12px;
 $font-size_14: 14px;
@@ -28,7 +33,7 @@ $font-size_20: 20px;
     @include background-size(100%, 300px);
     &__user-name {
       @include background-size(100px, 100%);
-      background-color: #253141;
+      background-color: $color-253141;
       display: flex;
       align-items: center;
       &__top-items {
@@ -38,7 +43,7 @@ $font-size_20: 20px;
         justify-content: space-between;
         &__name {
           @include background-size(100%, calc(100% - 60px));
-          color: $side-bar_font-color;
+          color: $color-ffffff;
           font-size: $font-size_16;
           line-height: 20px;
         }
@@ -50,14 +55,14 @@ $font-size_20: 20px;
           li {
             margin-left: 5px;
             a {
-              color: $side-bar_font-color;
+              color: $color-ffffff;
             }
           }
         }
       }
     }
     &__group-list {
-      background-color: #2f3e51;
+      background-color: $color-2f3e51;
       @include background-size(calc(100vh - 100px), 100%);
       padding: 20px 20px 0 20px;
       &__top-items {
@@ -68,7 +73,7 @@ $font-size_20: 20px;
           margin-bottom: 5px;
           line-height: 15px;
           a {
-            color: $side-bar_font-color;
+            color: $color-ffffff;
             font-size: $font-size_15;
             font-weight: bold;
             text-decoration: none;
@@ -78,7 +83,7 @@ $font-size_20: 20px;
           @include background-size(11px, 100%);
           line-height: 11px;
           a {
-            color: $side-bar_font-color;
+            color: $color-ffffff;
             font-size: $font-size_11;
             font-weight: bold;
             text-decoration: none;
@@ -94,8 +99,8 @@ $font-size_20: 20px;
     @include background-size(100%, calc(100vw - 300px));
     &__group-info {
       @include background-size(100px, 100%);
-      background-color: #fff;
-      border-bottom: solid 1px #eee;
+      background-color: $color-ffffff;
+      border-bottom: solid 1px $color-eeeeee;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
@@ -104,14 +109,14 @@ $font-size_20: 20px;
         &__current-group {
           @include background-size(20px, 100%);
           margin-top: 35px;
-          color: $chat-main_font-color_title;
+          color: $color-333333;
           font-size: $font-size_20;
           line-height: 20px;
         }
         &__member-list {
           @include background-size(12px, 100%);
           margin-top: 15px;
-          color: $chat-main_font-color_sub;
+          color: $color-999999;
           font-size: $font-size_12;
           line-height: 12px;
         }
@@ -121,7 +126,7 @@ $font-size_20: 20px;
         &__btn-border {
           @include background-size(40px, 100%);
           margin-top: 28px;
-          border: 1px solid $chat-main_font-color_edit;
+          border: 1px solid $color-38aef0;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -130,7 +135,7 @@ $font-size_20: 20px;
             line-height: 40px;
             text-align: center;
             a {
-              color: $chat-main_font-color_edit;
+              color: $color-38aef0;
               font-size: $font-size_16;
               padding: 12px 22px;
               text-decoration: none;
@@ -140,7 +145,7 @@ $font-size_20: 20px;
       }
     }
     &__messages {
-      background-color: #fafafa;
+      background-color: $color-fafafa;
       @include background-size(calc(100vh - 100px - 90px), 100%);
       padding: 35px 40px 0 40px;
       &__message {
@@ -151,14 +156,13 @@ $font-size_20: 20px;
           display: flex;
           justify-content: left;
           &__talker {
-            @include background-size(100%, 25%);
-            color: $chat-main_font-color_title;
+            color: $color-333333;
             font-size: $font-size_16;
             line-height: 16px;
           }
           &__date {
-            @include background-size(100%, 25%);
-            color: $chat-main_font-color_sub;
+            margin-left: 10px;
+            color: $color-999999;
             font-size: $font-size_12;
             line-height: 16px;
           }
@@ -166,7 +170,7 @@ $font-size_20: 20px;
         &__text {
           @include background-size(14px, 100%);
           margin-bottom: 46px;
-          color: $chat-main_font-color_text;
+          color: $color-434a54;
           font-size: $font-size_14;
           line-height: 14px;
         }
@@ -176,7 +180,7 @@ $font-size_20: 20px;
       }
     }
     &__message-form {
-      background-color: #d2d2d2;
+      background-color: $color-d2d2d2;
       @include background-size(90px, 100%);
       padding: 20px 40px;
       &__new-message {
@@ -185,7 +189,7 @@ $font-size_20: 20px;
         justify-content: space-between;
         &__box {
           @include background-size(100%, calc(100% - 72px - 15px));
-          background-color: #fff;
+          background-color: $color-ffffff;
           position: relative;
           &__text {
             @include background-size(100%, 100%);
@@ -212,8 +216,8 @@ $font-size_20: 20px;
           @include background-size(100%, 72px);
           &__btn-border {
             @include background-size(50px, 100%);
-            background-color: $chat-main_font-color_edit;
-            border: 1px solid $chat-main_font-color_edit;
+            background-color: $color-38aef0;
+            border: 1px solid $color-38aef0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -222,7 +226,7 @@ $font-size_20: 20px;
               line-height: 50px;
               text-align: center;
               a {
-                color:$side-bar_font-color;
+                color:$color-ffffff;
                 font-size: $font-size_16;
                 padding: 17px 20px;
                 text-decoration: none;
