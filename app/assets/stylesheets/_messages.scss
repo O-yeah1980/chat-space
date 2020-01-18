@@ -226,6 +226,7 @@ $font-size_20: 20px;
             justify-content: center;
             .submit {
               background-color: $color-38aef0;
+              @include background-size(50px, 70px);
               color: $color-fafafa;
               font-size: $font-size_16;
               line-height: 50px;
