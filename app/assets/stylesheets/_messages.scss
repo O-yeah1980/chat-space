@@ -65,6 +65,9 @@ $font-size_20: 20px;
       background-color: $color-2f3e51;
       @include background-size(calc(100vh - 100px), 100%);
       padding: 20px 20px 0 20px;
+      a {
+        text-decoration: none;
+      }
       &__top-items {
         @include background-size(31px, 100%);
         margin-bottom: 40px;
@@ -72,27 +75,27 @@ $font-size_20: 20px;
           @include background-size(15px, 100%);
           margin-bottom: 5px;
           line-height: 15px;
-          a {
-            color: $color-ffffff;
-            font-size: $font-size_15;
-            font-weight: bold;
-            text-decoration: none;
-          }
+          color: $color-ffffff;
+          font-size: $font-size_15;
+          font-weight: bold;
+          // text-decoration: none;
+          // a {
+          // }
         }
         &__message {
           @include background-size(11px, 100%);
           line-height: 11px;
-          a {
-            color: $color-ffffff;
-            font-size: $font-size_11;
-            font-weight: bold;
-            text-decoration: none;
-          }
+          color: $color-ffffff;
+          font-size: $font-size_11;
+          font-weight: bold;
+          // text-decoration: none;
+          // a {
+          // }
         }
       }
-      &__top-items2 {
-        @extend .side-bar__group-list__top-items;
-      }
+      // &__top-items2 {
+      //   @extend .side-bar__group-list__top-items;
+      // }
     }
   }
   .chat-main {
@@ -186,31 +189,59 @@ $font-size_20: 20px;
       &__new-message {
         @include background-size(50px, calc(100vw - 300px - 40px - 40px));
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         &__box {
-          @include background-size(100%, calc(100% - 72px - 15px));
-          background-color: $color-ffffff;
+          @include background-size(100%, 100%);
           position: relative;
-          &__text {
-            @include background-size(100%, 100%);
-            padding-left: 10px;
-            border-style: none;
+          display: flex;
+          justify-content: space-between;
+          &__left {
+            background-color: $color-ffffff;
+            @include background-size(100%, calc(100% - 70px - 15px));
+            .text {
+              @include background-size(100%, 100%);
+              padding-left: 10px;
+              border-style: none;
+            }
+            .image {
+              @include background-size(100%, 50px);
+              position: absolute;
+              top: 0;
+              left: calc(100% - 50px - 10px - 70px);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &__icon {
+                font-size: 1.5em;
+              }
+              &__file {
+                display: none;
+              }
+            }
           }
-          &__image {
-            @include background-size(100%, 50px);
-            position: absolute;
-            top: 0;
-            left: calc(100% - 50px - 10px);
+          &__right {
+            background-color: $color-38aef0;
+            @include background-size(50px, 70px);
             display: flex;
             justify-content: center;
-            align-items: center;
-            &__icon {
-              font-size: 1.5em;
+            .submit {
+              background-color: $color-38aef0;
+              color: $color-fafafa;
+              font-size: $font-size_16;
+              line-height: 50px;
+              text-align: center;
+              border-style: none;
             }
-            &__file {
-              display: none;
-            }
+            // .submit {
+              // @include background-size(50px, 90px);
+              // padding: 20px 50px;
+              // align-items: center;
+            // }
           }
+          // .new_message {
+            // display: flex;
+            // justify-content: space-between;
+          // }
         }
         &__right-item {
           @include background-size(100%, 72px);
@@ -238,3 +269,4 @@ $font-size_20: 20px;
     }
   }
 }
+// calc(100% - 72px - 15px)
