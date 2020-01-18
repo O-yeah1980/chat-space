@@ -11,6 +11,17 @@
           =link_to "Edit", "#"
   .chat-main__messages
     = render @messages
+  .chat-main__message-form
+    .chat-main__message-form__new-message
+      = form_for [@group, @message], html: {class: 'chat-main__message-form__new-message__box'} do |f|
+        .chat-main__message-form__new-message__box__left
+          = f.text_field :content, class: 'text', placeholder: 'type a message'
+          = f.label :image, class: 'image' do
+            = icon('fas', 'image', class: 'image__icon')
+            = f.file_field :image, class: 'image__file'
+        .chat-main__message-form__new-message__box__right
+          = f.submit 'Send', class: 'submit'
+
     -# .chat-main__messages__message
     -#   .chat-main__messages__message__info
     -#     %p.chat-main__messages__message__info__talker
@@ -40,15 +51,3 @@
   -#     .chat-main__message-form__new-message__right-item__btn-border
   -#       .chat-main__message-form__new-message__right-item__btn-border__submit-btn
   -#         =link_to "Send", "#"
-
-
-  .chat-main__message-form
-    .chat-main__message-form__new-message
-      = form_for [@group, @message], html: {class: 'chat-main__message-form__new-message__box'} do |f|
-        .chat-main__message-form__new-message__box__left
-          = f.text_field :content, class: 'text', placeholder: 'type a message'
-          = f.label :image, class: 'image' do
-            = icon('fas', 'image', class: 'image__icon')
-            = f.file_field :image, class: 'image__file'
-        .chat-main__message-form__new-message__box__right
-          = f.submit 'Send', class: 'submit'
