@@ -232,39 +232,30 @@ $font-size_20: 20px;
               text-align: center;
               border-style: none;
             }
-            // .submit {
-              // @include background-size(50px, 90px);
-              // padding: 20px 50px;
-              // align-items: center;
-            // }
-          }
-          // .new_message {
-            // display: flex;
-            // justify-content: space-between;
-          // }
-        }
-        &__right-item {
-          @include background-size(100%, 72px);
-          &__btn-border {
-            @include background-size(50px, 100%);
-            background-color: $color-38aef0;
-            border: 1px solid $color-38aef0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &__submit-btn {
-              @include background-size(50px, 100%);
-              line-height: 50px;
-              text-align: center;
-              a {
-                color:$color-ffffff;
-                font-size: $font-size_16;
-                padding: 17px 20px;
-                text-decoration: none;
-              }
-            }
           }
         }
+        // &__right-item {
+        //   @include background-size(100%, 72px);
+        //   &__btn-border {
+        //     @include background-size(50px, 100%);
+        //     background-color: $color-38aef0;
+        //     border: 1px solid $color-38aef0;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     &__submit-btn {
+        //       @include background-size(50px, 100%);
+        //       line-height: 50px;
+        //       text-align: center;
+        //       a {
+        //         color:$color-ffffff;
+        //         font-size: $font-size_16;
+        //         padding: 17px 20px;
+        //         text-decoration: none;
+        //       }
+        //     }
+        //   }
+        // }
       }
     }
   }
