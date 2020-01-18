@@ -2,9 +2,11 @@
   .chat-main__group-info
     .chat-main__group-info__left-items
       .chat-main__group-info__left-items__current-group
-        TEST-group
+        =@group.name
       .chat-main__group-info__left-items__member-list
-        Member: hiroshi
+        Member:
+        - @group.users.each do |user|
+          =user.name
     .chat-main__group-info__right-item
       .chat-main__group-info__right-item__btn-border
         .chat-main__group-info__right-item__btn-border__edit-btn
