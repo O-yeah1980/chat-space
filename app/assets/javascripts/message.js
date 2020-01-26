@@ -53,7 +53,9 @@ $(function(){
     })
     .done(function(message) {
       var html = buildHTML(message);
-      // console.log(message);
+      $('.chat-main__messages').append(html);
+      $('#message_content').val('')
+      console.log(html);
     })
   })
 });
