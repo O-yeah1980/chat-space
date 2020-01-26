@@ -198,7 +198,7 @@ $font-size_20: 20px;
           &__left {
             background-color: $color-ffffff;
             @include background-size(100%, calc(100% - 70px - 15px));
-            .text {
+            .textbox {
               @include background-size(100%, 100%);
               padding-left: 10px;
               border-style: none;
@@ -224,7 +224,7 @@ $font-size_20: 20px;
             @include background-size(50px, 70px);
             display: flex;
             justify-content: center;
-            .submit {
+            .form__submit {
               background-color: $color-38aef0;
               @include background-size(50px, 70px);
               color: $color-fafafa;
