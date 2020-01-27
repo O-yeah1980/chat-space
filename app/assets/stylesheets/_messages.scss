@@ -151,6 +151,7 @@ $font-size_20: 20px;
       background-color: $color-fafafa;
       @include background-size(calc(100vh - 100px - 90px), 100%);
       padding: 35px 40px 0 40px;
+      overflow: scroll;
       &__message {
         @include background-size(88px, 100%);
         &__info {
