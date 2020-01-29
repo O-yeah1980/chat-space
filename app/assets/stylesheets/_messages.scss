@@ -153,7 +153,7 @@ $font-size_20: 20px;
       padding: 35px 40px 0 40px;
       overflow: scroll;
       &__message {
-        @include background-size(88px, 100%);
+        background-size: cover;
         &__info {
           @include background-size(16px, 100%);
           margin-bottom: 12px;
@@ -171,12 +171,17 @@ $font-size_20: 20px;
             line-height: 16px;
           }
         }
-        &__text {
-          @include background-size(14px, 100%);
+        &__content {
+          background-size: cover;
           margin-bottom: 46px;
-          color: $color-434a54;
-          font-size: $font-size_14;
-          line-height: 14px;
+          &__text {
+            color: $color-434a54;
+            font-size: $font-size_14;
+            line-height: 14px;
+          }
+          &__image {
+            // margin-bottom: 46px;
+          }
         }
       }
       &__message2 {
