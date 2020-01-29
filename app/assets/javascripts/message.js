@@ -30,8 +30,8 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-          <div class="chat-main__messages__message__text">
-            <p>
+          <div class="chat-main__messages__message__content">
+            <p class="chat-main__messages__message__content__text">
               ${message.content}
             </p>
           </div>
@@ -57,7 +57,6 @@ $(function(){
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
       $('form')[0].reset();
       $('.form__submit').prop('disabled', false);
-      // console.log(html);
     })
     .fail(function() {
       alert("メッセージを入力してください");
