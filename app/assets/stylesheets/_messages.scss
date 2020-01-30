@@ -65,6 +65,7 @@ $font-size_20: 20px;
       background-color: $color-2f3e51;
       @include background-size(calc(100vh - 100px), 100%);
       padding: 20px 20px 0 20px;
+      overflow: scroll;
       a {
         text-decoration: none;
       }
@@ -78,9 +79,6 @@ $font-size_20: 20px;
           color: $color-ffffff;
           font-size: $font-size_15;
           font-weight: bold;
-          // text-decoration: none;
-          // a {
-          // }
         }
         &__message {
           @include background-size(11px, 100%);
@@ -88,14 +86,8 @@ $font-size_20: 20px;
           color: $color-ffffff;
           font-size: $font-size_11;
           font-weight: bold;
-          // text-decoration: none;
-          // a {
-          // }
         }
       }
-      // &__top-items2 {
-      //   @extend .side-bar__group-list__top-items;
-      // }
     }
   }
   .chat-main {
@@ -151,8 +143,9 @@ $font-size_20: 20px;
       background-color: $color-fafafa;
       @include background-size(calc(100vh - 100px - 90px), 100%);
       padding: 35px 40px 0 40px;
+      overflow: scroll;
       &__message {
-        @include background-size(88px, 100%);
+        background-size: cover;
         &__info {
           @include background-size(16px, 100%);
           margin-bottom: 12px;
@@ -170,16 +163,15 @@ $font-size_20: 20px;
             line-height: 16px;
           }
         }
-        &__text {
-          @include background-size(14px, 100%);
+        &__content {
+          background-size: cover;
           margin-bottom: 46px;
-          color: $color-434a54;
-          font-size: $font-size_14;
-          line-height: 14px;
+          &__text {
+            color: $color-434a54;
+            font-size: $font-size_14;
+            line-height: 14px;
+          }
         }
-      }
-      &__message2 {
-        @extend .chat-main__messages__message;
       }
     }
     &__message-form {
@@ -189,7 +181,6 @@ $font-size_20: 20px;
       &__new-message {
         @include background-size(50px, calc(100vw - 300px - 40px - 40px));
         display: flex;
-        // justify-content: space-between;
         &__box {
           @include background-size(100%, 100%);
           position: relative;
@@ -198,7 +189,7 @@ $font-size_20: 20px;
           &__left {
             background-color: $color-ffffff;
             @include background-size(100%, calc(100% - 70px - 15px));
-            .text {
+            .textbox {
               @include background-size(100%, 100%);
               padding-left: 10px;
               border-style: none;
@@ -224,7 +215,7 @@ $font-size_20: 20px;
             @include background-size(50px, 70px);
             display: flex;
             justify-content: center;
-            .submit {
+            .form__submit {
               background-color: $color-38aef0;
               @include background-size(50px, 70px);
               color: $color-fafafa;
@@ -235,30 +226,7 @@ $font-size_20: 20px;
             }
           }
         }
-        // &__right-item {
-        //   @include background-size(100%, 72px);
-        //   &__btn-border {
-        //     @include background-size(50px, 100%);
-        //     background-color: $color-38aef0;
-        //     border: 1px solid $color-38aef0;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     &__submit-btn {
-        //       @include background-size(50px, 100%);
-        //       line-height: 50px;
-        //       text-align: center;
-        //       a {
-        //         color:$color-ffffff;
-        //         font-size: $font-size_16;
-        //         padding: 17px 20px;
-        //         text-decoration: none;
-        //       }
-        //     }
-        //   }
-        // }
       }
     }
   }
 }
-// calc(100% - 72px - 15px)
