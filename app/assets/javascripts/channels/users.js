@@ -46,4 +46,8 @@ $(function(){
       // console.log("failed");
     })
   });
+
+  $(document).on("click", ".chat-group-user__btn", function(){
+    console.log("yeah");
+  });
 });
