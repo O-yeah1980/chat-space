@@ -23,13 +23,15 @@ $(function(){
   function addDeleteUser(id, name){
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
-      <input name='group[user_ids][]' type='hidden' value='ユーザーのid'>  //この記述によりuserがDBに保存される
+      <input name='group[user_ids][]' type='hidden' value='${id}'>
       <p class="chat-group-user__name">${name}</p>
       <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>
     `;
     $(".js-add-user").append(html);
   }
+
+
 
   $('#user-search-field').on("keyup", function(){
     let input = $('#user-search-field').val();
@@ -67,6 +69,6 @@ $(function(){
   });
 
   $(document).on("click", ".chat-group-user__btn--remove", function(){
-    $(this).parent.remove;
+    $(this).parent().remove();
   })
 });
