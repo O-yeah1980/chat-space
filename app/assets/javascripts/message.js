@@ -1,7 +1,7 @@
 $(function(){
-  function buildHTML(message){
+  let buildHTML = function(message){
     if ( message.image ) {
-      var html =
+      let html =
        `<div class="chat-main__messages__message" data-message-id=${message.id}>
           <div class="chat-main__messages__message__info">
             <div class="chat-main__messages__message__info__talker">
@@ -20,7 +20,7 @@ $(function(){
         </div>`
       return html;
     } else {
-      var html =
+      let html =
        `<div class="chat-main__messages__message" data-message-id=${message.id}>
           <div class="chat-main__messages__message__info">
             <div class="chat-main__messages__message__info__talker">
@@ -41,8 +41,8 @@ $(function(){
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action');
+    let formData = new FormData(this);
+    let url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -52,7 +52,7 @@ $(function(){
       contentType: false
     })
     .done(function(message) {
-      var html = buildHTML(message);
+      let html = buildHTML(message);
       $('.chat-main__messages').append(html);
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
       $('form')[0].reset();
@@ -63,4 +63,30 @@ $(function(){
       $('.form__submit').prop('disabled', false);
     });
   })
+
+  let reloadMessages = function() {
+    last_message_id = $('.chat-main__messages__message:last').data("message-id");
+    $.ajax({
+      url: "api/messages",
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        let insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.chat-main__messages').append(insertHTML);
+        $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
+      }
+    })
+    .fail(function() {
+      alert("通信エラーです");
+    });
+  };
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
